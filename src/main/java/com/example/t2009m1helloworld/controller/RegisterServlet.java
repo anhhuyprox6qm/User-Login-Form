@@ -14,34 +14,25 @@ import java.util.List;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        // lấy dữ liệu truyền lên từ query string
-//        String currentName=req.getParameter("currentName");
-//        // set vào thuộc tính của request.
-//        req.setAttribute("currentName","Dao Hong Luyen");
-//        List<Student> list=new ArrayList<>();
-//        Student student = new Student("A001","Xuan Hung",1);
-//        list.add(student);
-//        Student student1= new Student("A002","Xuan Luyen",1);
-//        list.add(student1);
-//        req.setAttribute("list",student);
-        req.getRequestDispatcher("/user/register.jsp").forward(req, resp);
-
+        String currentName = req.getParameter("currentName");
+        req.setAttribute("currentName",currentName);
+        req.getRequestDispatcher("/User/Register.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        req.setCharacterEncoding("UTF-8");
-        String username= req.getParameter("username");
-        String password= req.getParameter("password");
-        String confirmPassword= req.getParameter("comfirmPassword");
-        String fullName= req.getParameter("fullName");
-
-        Account account = new Account();
-        account.setUsername(username);
-        account.setUsername(password);
-        account.setUsername(fullName);
-        req.setAttribute("account",account);
-        req.getRequestDispatcher("/user/register-success.jsp").forward(req,resp);
+        String username = req.getParameter("username");
+        String passwordHash = req.getParameter("passwordHash");
+        Integer status = Integer.parseInt(req.getParameter("status"));
+        User user = new User();
+        user.setUsername(username);
+        user.setPasswordHash(passwordHash);
+        user.setStatus(status);
+        MySqlUserModel mySqlUserModel = new MySqlUserModel();
+        boolean result = mySqlUserModel.save(user);
+        System.out.println(result);
+        req.setAttribute("user", user);
+        req.getRequestDispatcher("/User/Register-success.jsp").forward(req, resp);
     }
 }
