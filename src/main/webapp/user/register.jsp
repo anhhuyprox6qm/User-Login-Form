@@ -1,49 +1,21 @@
+
+<%@ page import="com.example.t2009m1helloworld.model.User" %><%
+    User user = (User) request.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Al0</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
 
-
-<form action="/register" method="post" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
-    <h2 class="w3-center">Register form</h2>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="username" type="text" placeholder="Username">
-        </div>
+<div class="w3-container">
+    <div class="w3-panel w3-green">
+        <h2 class="w3-opacity">Register Success</h2>
     </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="password" type="password" placeholder="Password">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="confirmpassword" type="text" placeholder="Email">
-        </div>
-    </div>
-
-    <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
-        <div class="w3-rest">
-            <input class="w3-input w3-border" name="fullName" type="text" placeholder="Full name">
-        </div>
-    </div>
-
-
-    <p class="w3-center">
-        <button type="submit" class="w3-button w3-section w3-blue w3-ripple"> Save </button>
-        <button type="reset" class="w3-button w3-section w3-blue w3-ripple"> Reset </button>
-    </p>
-</form>
-
+    <div>Username: <%= user.getUsername()%></div>
+    <div>PasswordHash: <%= user.getPasswordHash()%></div>
+    <div>Status: <%= user.getStatus()%></div>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.example.t2009m1helloworld.entity;
+package com.example.t2009m1helloworld.model;
 
 public class User {
     private int id;
@@ -58,7 +58,3 @@ public class User {
         this.status = status;
     }
 }
-
-
-
-

@@ -1,8 +1,8 @@
 package com.example.t2009m1helloworld.model;
 
-import com.example.t2009m1helloworld.entity.User;
-import util.ConnectionHelper;
+import com.example.t2009m1helloworld.util.ConnectionHelper;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,6 +23,7 @@ public class MySqlUserModel implements UserModel{
             return true;
         }catch (SQLException e){
             e.printStackTrace();
+
         }
         return false;
     }

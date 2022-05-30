@@ -1,16 +1,17 @@
 package util;
 
 import java.sql.Connection;
-import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionHelper {
-    private static final String DATABASE_URL="jbdc:mysql://localhost:3306";
-    private static final String DATABASE_USERNAME="root";
-    private static final String DATABASE_PASSWORD="";
-    private static Connection connection;//Class variable.
-    public static Connection getConnection() {
+
+    private static final String DATABASE_URL = "jdbc:mysql://localhost:3306/users";
+    private static final String DATABASE_USERNAME = "root";
+    private static final String DATABASE_PASSWORD = "";
+
+    private static Connection connection;
+    public static  Connection getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             if (connection == null || connection.isClosed()) {
@@ -19,11 +20,9 @@ public class ConnectionHelper {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e ) {
             e.printStackTrace();
         }
         return connection;
     }
-
-    }
-
+}

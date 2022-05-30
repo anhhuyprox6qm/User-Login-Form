@@ -1,5 +1,7 @@
 package com.example.t2009m1helloworld.controller;
 
+import com.example.t2009m1helloworld.model.MySqlUserModel;
+import com.example.t2009m1helloworld.model.User;
 import com.example.t2009m1helloworld.entity.Account;
 import com.example.t2009m1helloworld.entity.Student;
 
@@ -8,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class RegisterServlet extends HttpServlet {
     @Override
