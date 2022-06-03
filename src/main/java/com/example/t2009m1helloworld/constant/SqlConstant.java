@@ -7,4 +7,5 @@ public class SqlConstant {
             "createdAt = ?, updatedAt = ?, deletedAt = ?, createdBy = ?, updatedBy = ?, deletedBy = ?, status = ? WHERE id = ?;";
     public static final String PRODUCT_DELETE = "DELETE FROM products WHERE id = ?;";
     public static final String PRODUCT_FIND_BY_ID = "SELECT * FROM products WHERE id = ? AND status = ?;";
+    public static final String PRODUCT_FIND_ALL = "SELECT * FROM products WHERE status = ?;";
 }
