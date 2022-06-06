@@ -1,6 +1,6 @@
 package com.example.t2009m1helloworld.entity;
 
-public class ProductStatus {
+public enum ProductStatus {
     ACTIVE(1),
     DEACTIVE(0),
     DELETED(-1),

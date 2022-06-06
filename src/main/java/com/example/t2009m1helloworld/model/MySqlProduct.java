@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySqlProduct implements ProductModel {
+public class MySqlProduct implements  ProductModel {
     @Override
     public boolean save(Product product) {
         try{

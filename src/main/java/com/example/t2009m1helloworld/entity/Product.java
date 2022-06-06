@@ -1,6 +1,7 @@
 package com.example.t2009m1helloworld.entity;
 
 import com.example.t2009m1helloworld.entity.base.BaseEntity;
+import util.ValidationHelper;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -165,4 +166,5 @@ public class Product extends BaseEntity {
         }
         return errors.size() == 0;
     }
+
 }

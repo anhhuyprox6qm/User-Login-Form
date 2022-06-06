@@ -1,6 +1,6 @@
 package com.example.t2009m1helloworld.model;
 
-import com.example.t2009m1helloworld.util.ConnectionHelper;
+import util.ConnectionHelper;
 
 import javax.xml.transform.Result;
 import java.sql.Connection;

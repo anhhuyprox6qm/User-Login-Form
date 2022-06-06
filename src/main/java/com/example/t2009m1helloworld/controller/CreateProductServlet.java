@@ -1,7 +1,7 @@
 package com.example.t2009m1helloworld.controller;
 
-import com.example.t2009m1helloworld.model.MySqlProduct;
 import com.example.t2009m1helloworld.entity.Product;
+import com.example.t2009m1helloworld.model.MySqlProduct;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
