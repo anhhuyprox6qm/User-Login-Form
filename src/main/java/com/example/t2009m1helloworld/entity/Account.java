@@ -1,12 +1,17 @@
 package com.example.t2009m1helloworld.entity;
 
-public class Account {
+import com.example.t2009m1helloworld.entity.base.BaseEntity;
+
+public class Account extends BaseEntity {
+    private int id;
     private String username;
-    private String password;
-    private String fullName;
     private String email;
-    private String phone;
-    private String birthday;
+    private String password;
+    private String confirmPassword;
+
+    private String fullName;
+    private int roleId;//1.user | 2.admin
+    private AccountStatus status;//1.active,-1.deleted,0.deactive
 
     public Account() {
     }

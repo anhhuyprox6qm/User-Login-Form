@@ -80,4 +80,12 @@
         <url-pattern>/shopping-cart/remove</url-pattern>
     </servlet-mapping>
     <!-- end of client servlet-->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>fpt.aptech.t2009m1heloworld.controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
 </web-app>
